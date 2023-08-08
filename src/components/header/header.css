@@ -1,0 +1,130 @@
+header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-bottom: 2px solid red;
+}
+
+header .container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+}
+
+.logo h1 {
+  font-weight: 100;
+  letter-spacing: 5px;
+  font-size: 25px;
+}
+
+.logo h1 span {
+  text-transform: uppercase;
+  color: red;
+}
+
+.navbar {
+  height: 100%;
+  width: 60%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  font-size: 18px;
+  text-transform: uppercase;
+  height: 60%;
+  padding: 0 1rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.navbar li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li:hover,
+.navbar .active {
+  color: red;
+  background-color: white;
+}
+
+.btn_container {
+  width: 20%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_container button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid red;
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  header .container {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    /* transition: all ease-in-out 0.5s; */
+  }
+
+  .navbar {
+    height: calc(100vh - 100px);
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    right: -200%;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar li {
+    font-size: 18px;
+    text-transform: uppercase;
+    height: 100px;
+    width: 90%;
+    padding: 0 1rem;
+    transition: all ease-in-out 0.3s;
+  }
+
+  .btn_container {
+    display: block;
+  }
+}
